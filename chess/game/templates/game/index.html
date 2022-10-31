@@ -1,0 +1,9 @@
+{% extends "game/layout.html" %}
+{% load static %}
+
+{% block body %}
+<h1>Welcome!</h1>
+<div id="myBoard" style="width: 400px"></div>
+
+<script src="{% static 'game/script.js' %}"></script>
+{% endblock %}

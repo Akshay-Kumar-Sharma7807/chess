@@ -1,0 +1,27 @@
+/* * {
+    box-sizing: border-box;
+} */
+
+.dot::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+img {
+    z-index: 10;
+}
+
+.highlight {
+    /* border: 1px solid yellow; */
+    /* box-shadow: 0 0 10px rgb(93, 117, 255); */
+    /* border: 2px solid rgb(101, 101, 255); */
+    /* Todo */
+}
