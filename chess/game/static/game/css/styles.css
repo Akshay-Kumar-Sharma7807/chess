@@ -1,6 +1,9 @@
-/* * {
-    box-sizing: border-box;
-} */
+/* Configuration for bootstrap */
+:root {
+    --bs-primary: #59C1BD;
+}
+
+
 
 .dot::before {
     content: "";
@@ -24,4 +27,9 @@ img {
     /* box-shadow: 0 0 10px rgb(93, 117, 255); */
     /* border: 2px solid rgb(101, 101, 255); */
     /* Todo */
+}
+
+.gradient {
+    background: rgb(35, 25, 208);
+    background: linear-gradient(323deg, rgba(35, 25, 208, 1) 0%, rgba(46, 46, 196, 1) 35%, rgba(0, 212, 255, 1) 100%);
 }

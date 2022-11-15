@@ -2,8 +2,20 @@
 {% load static %}
 
 {% block body %}
-<h1>Welcome!</h1>
-<div id="myBoard" style="width: 400px"></div>
-
-<script src="{% static 'game/script.js' %}"></script>
+<header class="page header p-5 text-white gradient">
+    <div class="container py-5">
+        <div class="row">
+            <h1 class="h1 text-center">Welcome! Chesser</h1>
+        </div>
+        <div class="mx-auto d-flex gap-2 justify-content-center">
+            <a href="{% url 'play' %}">
+                <button class="btn btn-primary btn-lg">Play Now</button>
+            </a>
+            <a>
+                <button class="btn btn-primary btn-lg">Explore Games</button>
+            </a>
+        </div>
+        <!-- <div id="myBoard" style="width: 400px"></div> -->
+    </div>
+</header>
 {% endblock %}

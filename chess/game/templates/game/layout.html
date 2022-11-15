@@ -25,22 +25,42 @@
 </head>
 
 <body>
-    <nav class="navbar ">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
 
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+        <div class="container">
+            <a class="navbar-brand d-flex justify-content-center align-items-center" href="#">
                 <img src="{% static 'game/chess.svg' %}" alt="Chess" width="30" height="24">
-                Chess
+                Chesser
             </a>
 
-        </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+                    </li>
+                    {% else %}
 
-        <ul>
-            <li>Home</li>
-            <li>Play</li>
-            <li>About</li>
-            <li>Login</li>
-        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'register' %}">Sign Up</a>
+                    </li>
+                    {% endif %}
+                    <!-- <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li> -->
+                </ul>
+            </div>
+        </div>
     </nav>
 
     {% block body %}
